@@ -187,6 +187,9 @@ INSTALLED_APPS = [
     'sortedm2m',
     'djangocms_blog',
     'news_site',
+    'django_comments_xtd',
+    'django_comments',
+    'comments_cms_integration',
 ]
 
 LANGUAGES = (
@@ -252,3 +255,6 @@ META_USE_TWITTER_PROPERTIES=True
 META_USE_GOOGLEPLUS_PROPERTIES=True
 
 BLOG_IMAGE_FULL_SIZE={'size': '640x480', 'crop': True, 'upscale': False}
+BLOG_ENABLE_COMMENTS=True
+COMMENTS_APP = 'django_comments_xtd'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
