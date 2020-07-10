@@ -7,9 +7,9 @@ from django.utils.translation import ugettext as _
 @plugin_pool.register_plugin  # register the plugin
 class CommentPluginPublisher(CMSPluginBase):
     model = CommentPluginModel  # model where plugin data are saved
-    module = _("django-comments-xtd")
+    module = _("django_comments")
     name = _("Comment Plugin")  # name of the plugin in the interface
-    render_template = "comments/form.html"
+    render_template = "comments/comment_list.html"
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})
