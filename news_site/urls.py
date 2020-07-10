@@ -19,6 +19,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
+    url(r'^comments/', include('django_comments.urls')),
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
     url(r'^', include('cms.urls')),
 )

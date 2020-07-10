@@ -9,7 +9,7 @@ class CommentPluginPublisher(CMSPluginBase):
     model = CommentPluginModel  # model where plugin data are saved
     module = _("django_comments")
     name = _("Comment Plugin")  # name of the plugin in the interface
-    render_template = "comments/comment_list.html"
+    render_template = "comments/base.html"
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})
